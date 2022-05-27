@@ -1,0 +1,6 @@
+{
+    "require": {
+        "aws/aws-sdk-php": "^3.178",
+        "kreait/firebase-php": "^5.17"
+    }
+}
