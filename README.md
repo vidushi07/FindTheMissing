@@ -30,6 +30,7 @@ STORY SAMJHADENA. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobi
 * PHP
 * Firebase and FireStore
 * AWS Face Rekognition
+* Elastic Mail
 
 
 # Requirements
