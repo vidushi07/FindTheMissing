@@ -274,12 +274,13 @@
 		</div>
 		<br>
 		<br>
-		<a href="police_signup.php"><button class="btn" onMouseOver="this.style.color='#0288d1'" onMouseOut="this.style.color='#0d324d'"> Police</button></a>
-		<br>
-		<br>
-		<br>
-		<a href="user_signup.php"><button class="btn" onMouseOver="this.style.color='#0288d1'" onMouseOut="this.style.color='#0d324d'"> User</button></a>
-
+		<div class="select">
+			<a href="police_signup.php"><button class="btn" onMouseOver="this.style.color='#0288d1'" onMouseOut="this.style.color='#0d324d'"> Police</button></a>
+			<br>
+			<br>
+			<br>
+			<a href="user_signup.php"><button class="btn" onMouseOver="this.style.color='#0288d1'" onMouseOut="this.style.color='#0d324d'"> User</button></a>
+		</div>
 	</center>
 </body>
 

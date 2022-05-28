@@ -16,9 +16,9 @@
       <!-- Navbar -->
       <?php include('includes/topnav.php'); ?>
       <!-- End Navbar -->
-      
-	<!-- middle content start -->
-	  <div class="content">
+
+      <!-- middle content start -->
+      <div class="content">
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-8">
@@ -36,16 +36,16 @@
                           <input type="text" class="form-control" id="user_name">
                         </div>
                       </div>
-					  <div class="col-md-4">
+                      <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Phone No.</label>
-                          <input type="text" class="form-control"id="phone" onkeypress="return isNumber(event)">
+                          <input type="text" class="form-control" id="phone" onkeypress="return isNumber(event)">
                         </div>
                       </div>
-					  <div class="col-md-4">
+                      <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Email Id</label>
-                          <input type="email" class="form-control"id="ed">
+                          <input type="email" class="form-control" id="ed">
                         </div>
                       </div>
                     </div>
@@ -53,21 +53,21 @@
                       <div class="col-md-12">
                         <div class="form-group">
                           <label class="bmd-label-floating">Address</label>
-                          <input type="text" class="form-control"id="add">
+                          <input type="text" class="form-control" id="add">
                         </div>
                       </div>
                     </div>
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Brachn Name</label>
-                          <input type="text" class="form-control"id="branch-name">
+                          <label class="bmd-label-floating">Branch Name</label>
+                          <input type="text" class="form-control" id="branch-name">
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">State Name</label>
-                          <input type="text" class="form-control"id="state-name">
+                          <input type="text" class="form-control" id="state-name">
                         </div>
                       </div>
                     </div>
@@ -75,13 +75,13 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">City</label>
-                          <input type="text" class="form-control"id="city-name">
+                          <input type="text" class="form-control" id="city-name">
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Country</label>
-                          <input type="text" class="form-control"id="country-name">
+                          <input type="text" class="form-control" id="country-name">
                         </div>
                       </div>
                       <div class="col-md-4">
@@ -104,7 +104,7 @@
                     <img class="img" src="assets/img/faces/paanduandpaandi.webp" />
                   </a>
                 </div>
-               <!-- <div class="card-body">
+                <!-- <div class="card-body">
                   <h6 class="card-category">CEO / Co-Founder</h6>
                   <h4 class="card-title">Alec Thompson</h4>
                   <p class="card-description">
@@ -117,147 +117,130 @@
           </div>
         </div>
       </div>
-	  
-	<!-- middle content end -->  
-	  
-	  
-      <?php //include('includes/footer.php'); ?>
+
+      <!-- middle content end -->
+
+
+      <?php //include('includes/footer.php'); 
+      ?>
     </div>
   </div>
- 
+
   <?php include('includes/js.php'); ?>
-  
+
   <script>
-   
- // edit_profile
- $("#update-btn").click(function(){
-	var user_name = $("#user_name").val();
-	var phone = $("#phone").val();
-	var address = $("#add").val();
-	var branch = $("#branch-name").val();
-	var state = $("#state-name").val();
-	var pin = $("#pin-code").val();
-	var city = $("#city-name").val();
-	var country = $("#country-name").val();
-	var email = $("#ed").val();
-	
-	var rootRef = firebase.database().ref().child("Users");
-	var userId = firebase.auth().currentUser.uid;
-	// var current_user_mail=firebase.auth().currentUser.email;
-	var userRef = rootRef.child(userId);
-	
-		if(user_name==''){
-			alert("please enter the User name !");
-		}
-		else if(phone ==''){
-			alert("please enter the phone no. !")
-		}
-		else if(email ==''){
-			alert("please enter the phone no. !")
-		}
-		else if(phone.length!=10){
-				alert("please enter the valid phone no. !")
-			}
-		else if(address==''){
-			alert("please enter the Address !");
-		}
-		else if(branch==''){
-			alert("please enter the Branch name !");
-		}
-		else if(state==''){
-			alert("please enter the state name !");
-		}
-		else if(city==''){
-			alert("please enter the city name !")
-		}
-		else if(country==''){
-			alert("please enter the country name !")
-		}
-		else if(pin==''){
-			alert("please enter the pin code !")
-		}
-		else if(pin.length != 6){
-			alert("please enter the valid pin code !")
-		}
-		
-	
-		else if(user_name!='' && phone!='' && email!='' && address!='' && branch!='' && state!='' && pin!='' && city!='' && country!=''){
-			var userData = {
-					"user_name":user_name,
-					"phone":phone,
-					"email":email,
-					"address":address,
-					"branch":branch,				
-					"state":state,
-					"pincode":pin,
-					"city":city,
-					"country":country,
-				};
-			
-			userRef.set(userData, function(error){
-				if(error){
-					var errorCode = error.code;
-					var errorMessage = error.message;
-					
-					console.log(errorCode);
-					console.log(errorMessage);
-					window.alert("Message : "+ errorMessage);
-				}
-				else{
-					window.location.href="profile.php";
-					alert("Your profile has been updated successfully");
-				}
-			});
-		}
-		else{
-			alert("Fields are empty!");
-		}
-});
-  
-  
-  function isNumber(evt) {
-    evt = (evt) ? evt : window.event;
-    var charCode = (evt.which) ? evt.which : evt.keyCode;
-    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+    // edit_profile
+    $("#update-btn").click(function() {
+      var user_name = $("#user_name").val();
+      var phone = $("#phone").val();
+      var address = $("#add").val();
+      var branch = $("#branch-name").val();
+      var state = $("#state-name").val();
+      var pin = $("#pin-code").val();
+      var city = $("#city-name").val();
+      var country = $("#country-name").val();
+      var email = $("#ed").val();
+
+      var rootRef = firebase.database().ref().child("Users");
+      var userId = firebase.auth().currentUser.uid;
+      // var current_user_mail=firebase.auth().currentUser.email;
+      var userRef = rootRef.child(userId);
+
+      if (user_name == '') {
+        alert("please enter the User name !");
+      } else if (phone == '') {
+        alert("please enter the phone no. !")
+      } else if (email == '') {
+        alert("please enter the phone no. !")
+      } else if (phone.length != 10) {
+        alert("please enter the valid phone no. !")
+      } else if (address == '') {
+        alert("please enter the Address !");
+      } else if (branch == '') {
+        alert("please enter the Branch name !");
+      } else if (state == '') {
+        alert("please enter the state name !");
+      } else if (city == '') {
+        alert("please enter the city name !")
+      } else if (country == '') {
+        alert("please enter the country name !")
+      } else if (pin == '') {
+        alert("please enter the pin code !")
+      } else if (pin.length != 6) {
+        alert("please enter the valid pin code !")
+      } else if (user_name != '' && phone != '' && email != '' && address != '' && branch != '' && state != '' && pin != '' && city != '' && country != '') {
+        var userData = {
+          "user_name": user_name,
+          "phone": phone,
+          "email": email,
+          "address": address,
+          "branch": branch,
+          "state": state,
+          "pincode": pin,
+          "city": city,
+          "country": country,
+        };
+
+        userRef.set(userData, function(error) {
+          if (error) {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+
+            console.log(errorCode);
+            console.log(errorMessage);
+            window.alert("Message : " + errorMessage);
+          } else {
+            window.location.href = "profile.php";
+            alert("Your profile has been updated successfully");
+          }
+        });
+      } else {
+        alert("Fields are empty!");
+      }
+    });
+
+
+    function isNumber(evt) {
+      evt = (evt) ? evt : window.event;
+      var charCode = (evt.which) ? evt.which : evt.keyCode;
+      if (charCode > 31 && (charCode < 48 || charCode > 57)) {
         return false;
+      }
+      return true;
     }
-    return true;
-}
-</script>
-  
-  
-<script>
-function getProfle(){
-	var userId = sessionStorage.getItem("login_id");
-	firebase.database().ref('Users/' + userId).once('value').then(function(snapshot){
-
-		// console.log(snapshot.val());
-		var uname = snapshot.val().user_name;
-		var addr  = snapshot.val().address;
-		var ph = snapshot.val().phone;
-		var mail = snapshot.val().email;
-		var br = snapshot.val().branch;
-		var st = snapshot.val().state;
-		var pn = snapshot.val().pincode;
-		var cty = snapshot.val().city;
-		var cntry = snapshot.val().country;
-		
-		document.getElementById("user_name").value = uname;
-		document.getElementById("phone").value = ph;
-		document.getElementById("ed").value = mail;
-		document.getElementById("add").value = addr;
-		document.getElementById("branch-name").value = br;
-		document.getElementById("state-name").value = st;
-		document.getElementById("pin-code").value = pn;
-		document.getElementById("city-name").value = cty;
-		document.getElementById("country-name").value = cntry;
-		
-	});
-}
+  </script>
 
 
-</script>
-  
+  <script>
+    function getProfle() {
+      var userId = sessionStorage.getItem("login_id");
+      firebase.database().ref('Users/' + userId).once('value').then(function(snapshot) {
+
+        // console.log(snapshot.val());
+        var uname = snapshot.val().user_name;
+        var addr = snapshot.val().address;
+        var ph = snapshot.val().phone;
+        var mail = snapshot.val().email;
+        var br = snapshot.val().branch;
+        var st = snapshot.val().state;
+        var pn = snapshot.val().pincode;
+        var cty = snapshot.val().city;
+        var cntry = snapshot.val().country;
+
+        document.getElementById("user_name").value = uname;
+        document.getElementById("phone").value = ph;
+        document.getElementById("ed").value = mail;
+        document.getElementById("add").value = addr;
+        document.getElementById("branch-name").value = br;
+        document.getElementById("state-name").value = st;
+        document.getElementById("pin-code").value = pn;
+        document.getElementById("city-name").value = cty;
+        document.getElementById("country-name").value = cntry;
+
+      });
+    }
+  </script>
+
 </body>
 
 </html>
