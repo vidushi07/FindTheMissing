@@ -2,16 +2,17 @@
 <html>
 
 <head>
-	<title>police Logins</title>
+	<title>Police Signup</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="police_login_style.css">
+	<link rel="stylesheet" href="police_signup_style.css">
 	<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
 	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Merriweather&family=Open+Sans:wght@300&family=Patua+One&family=Rubik:wght@300;600&family=Sacramento&family=Satisfy&family=Sniglet&family=Zen+Maru+Gothic:wght@300&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -28,71 +29,137 @@
 	</div>
 	<center>
 		<div class="container-logo">
-			<a href="\findthemissing\index.php"><img src="/findthemissing/images/loho2.png" alt="Logo" width="60px" height="60px"></a>
+			<a href="index.php"><img src="images/loho2.png" alt="Logo" width="60px" height="60px"></a>
 		</div>
 	</center>
+
 	<div class="container1">
 		<div class="form1">
-			<center>
-				<div style="margin-top:70px">
-					<h1 style="color:#b7ddfb">Police Login test</h1>
-					<h5 class="text-danger" id="login-err-msg"></h5>
+
+			<!-- <form>
+				<div class="topnav">
+					<div class="row mb-5">
+						<label for="inputEmail3" class="col-sm-3 col-form-label">Email:</label>
+						<div class="col-sm-3">
+							<input type="email" class="form-control" id="police-email">
+						</div>
+					</div>
+					<div class="row mb-4">
+						<label for="inputPassword3" class="col-sm-3 col-form-label">Password:</label>
+						<div class="col-sm-3">
+							<input type="password" class="form-control" id="police-pass" onkeyup="return passwordChanged()">
+							<span style="font-size:13px; color:white;" id="strength">Set Your Password</span>
+						</div>
+					</div>
+					<div class="row mb-4">
+						<label for="inputPassword3" class="col-sm-3 col-form-label">Confirm Password:</label>
+						<div class="col-sm-3">
+							<input type="password" class="form-control" id="police-cnf-pass">
+						</div>
+					</div>
 				</div>
-			</center>
-			<br>
+			</form> -->
 
 			<form>
 				<center>
-					<div class="xyz">
-						<div class="row mb-3">
-							<label for="email" class="col-sm-3 col-form-label">Police Email:</label>
+					<h1>Police Sign Up</h1>
+					<br>
+					<div class="topnav">
+						<div class="row mb-5">
+							<label for="inputEmail3" class="col-sm-6 col-form-label">Email :</label>
 							<div class="col-sm-6">
-								<input type="email" class="form-control" id="email">
+								<input type="email" class="form-control" id="police-email">
 							</div>
 						</div>
-						<div class="row mb-3">
-							<label for="password" class="col-sm-3 col-form-label">Password:</label>
+						<div class="row mb-4">
+							<label for="inputPassword3" class="col-sm-6 col-form-label">Password :</label>
 							<div class="col-sm-6">
-								<input type="password" class="form-control" id="password">
+								<input type="password" class="form-control" id="police-pass" onkeyup="return passwordChanged()">
+								<span style="font-size:13px; color:white;" id="strength">Set Your Password</span>
+							</div>
+						</div>
+						<div class="row mb-4">
+							<label for="inputPassword3" class="col-sm-6 col-form-label">Confirm Password :</label>
+							<div class="col-sm-6">
+								<input type="password" class="form-control" id="police-cnf-pass">
 							</div>
 						</div>
 					</div>
 				</center>
 			</form>
 			<center>
-				<button onMouseOver="this.style.color='#0288d1'" onMouseOut="this.style.color='#0d324d'" class="button" id="login-btn"> Login</button>
+				<button type="submit" onMouseOver="this.style.color='#0288d1'" onMouseOut="this.style.color='#0d324d'" class="button" id="sign-up-btn">Sign up</button>
+				<br>
 				<br>
 				<br>
 				<div>
-					<a href="forget_password.php" style="color:azure">Forgot password</a>
-				</div><br><br>
-				<div>
-					<a href="/findthemissing/policepanel/police_signup.php" style="color:azure">Don't have an account? Sign up</a>
+					<a href="police_login.php" style="color:azure; text-decoration:underline;">Already have an account? <br> Sign in </a>
 				</div>
+			</center>
 		</div>
 		<div class="image1">
-			<img src="/findthemissing/images/police.png" alt="Icon" width="300px" height="300px">
+			<img src="images/police.png" alt="Icon" width="300px" height="300px">
 		</div>
 	</div>
-	</center>
+	<br>
+	<br>
 
+	<br>
 	<script src="js/index.js"></script>
+
+	<script language="javascript">
+		function passwordChanged() {
+			// alert("hi");
+			var strength = document.getElementById('strength');
+			var strongRegex = new RegExp("^(?=.{10,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
+			var mediumRegex = new RegExp("^(?=.{8,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
+			var enoughRegex = new RegExp("(?=.{6,}).*", "g");
+			var pwd = document.getElementById("police-pass");
+			if (pwd.value.length == 0) {
+				strength.innerHTML = 'Set Your Password';
+			} else if (false == enoughRegex.test(pwd.value)) {
+				strength.innerHTML = '<span style="color:#FF66FF">More Characters</span>';
+			} else if (strongRegex.test(pwd.value)) {
+				strength.innerHTML = '<span style="color:#39FF14">Strong!</span>';
+			} else if (mediumRegex.test(pwd.value)) {
+				strength.innerHTML = '<span style="color:#FFFF00">Medium!</span>';
+			} else {
+				strength.innerHTML = '<span style="color:#fd1c03">Weak!</span>';
+			}
+		}
+
+
+
+		// function ValidateEmail(inputText){
+		// var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+		// if(inputText.value.match(mailformat))
+		// {
+		// alert("Valid email address!");
+		// document.form1.text1.focus();
+		// return true;
+		// }
+		// else
+		// {
+		// alert("You have entered an invalid email address!");
+		// document.form1.text1.focus();
+		// return false;
+		// }
+		// }
+	</script>
+
 	<script>
-		sessionStorage.removeItem('login_id'); //to out the session  of pre logged in id
 		firebase.auth().onAuthStateChanged(function(user) {
 			if (user) {
 				var userId = firebase.auth().currentUser.uid;
-				sessionStorage.setItem("login_id", userId);
 				firebase.database().ref('Users/' + userId).once('value').then(function(snapshot) {
-					if (snapshot.val()) {
-						window.location.href = "admin/dashboard.php";
-					} else {
-						window.location.href = "admin/profile.php";
+					if (!snapshot.val()) {
+						window.location.href = "policepanel/admin/profile.php";
 					}
 				});
 			}
 		});
 	</script>
+
 </body>
 
 </html>
