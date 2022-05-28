@@ -28,14 +28,14 @@
 	</div>
 	<center>
 		<div class="container-logo">
-			<a href="index.php"><img src="images/loho2.png" alt="Logo" width="60px" height="60px"></a>
+			<a href="\findthemissing\index.php"><img src="/findthemissing/images/loho2.png" alt="Logo" width="60px" height="60px"></a>
 		</div>
 	</center>
 	<div class="container1">
 		<div class="form1">
 			<center>
 				<div style="margin-top:70px">
-					<h1 style="color:#b7ddfb">Police Login</h1>
+					<h1 style="color:#b7ddfb">Police Login test</h1>
 					<h5 class="text-danger" id="login-err-msg"></h5>
 				</div>
 			</center>
@@ -67,11 +67,11 @@
 					<a href="forget_password.php" style="color:azure">Forgot password</a>
 				</div><br><br>
 				<div>
-					<a href="police_signup.php" style="color:azure">Don't have an account? Sign up</a>
+					<a href="/findthemissing/policepanel/police_signup.php" style="color:azure">Don't have an account? Sign up</a>
 				</div>
 		</div>
 		<div class="image1">
-			<img src="images/police.png" alt="Icon" width="300px" height="300px">
+			<img src="/findthemissing/images/police.png" alt="Icon" width="300px" height="300px">
 		</div>
 	</div>
 	</center>
@@ -85,9 +85,9 @@
 				sessionStorage.setItem("login_id", userId);
 				firebase.database().ref('Users/' + userId).once('value').then(function(snapshot) {
 					if (snapshot.val()) {
-						window.location.href = "policepanel/admin/dashboard.php";
+						window.location.href = "admin/dashboard.php";
 					} else {
-						window.location.href = "policepanel/admin/profile.php";
+						window.location.href = "admin/profile.php";
 					}
 				});
 			}
