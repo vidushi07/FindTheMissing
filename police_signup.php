@@ -29,7 +29,7 @@
 	</div>
 	<center>
 		<div class="container-logo">
-			<a href="/findthemissing/index.php"><img src="images/loho2.png" alt="Logo" width="60px" height="60px"></a>
+			<a href="index.php"><img src="images/loho2.png" alt="Logo" width="60px" height="60px"></a>
 		</div>
 	</center>
 
