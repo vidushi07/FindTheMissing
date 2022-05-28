@@ -6,7 +6,11 @@
 
 **Our vision is for every missing child and adult, and every loved one left behind, to find help, hope and a safe way to reconnect.**
   
-# Features
+ 
+<img src="./readme_images/home.png"/> 
+  
+  
+# Features 😍
 * Seperate Authentication System for Police Administration and User.
 
 * Once logged in, Police can upload the details and photos of missing victims. 
@@ -19,11 +23,16 @@
 
 > This Project is a submission for Microsoft Engage 2022.
 
-# How it works?
+# How it works? 🤔
 STORY SAMJHADENA. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis, harum. Illum cum facilis harum esse. Dicta dolore, minus aperiam autem libero illo quod mollitia consequatur atque quasi nemo magnam facere?
 
 
-# Tech Stack
+
+# Architectural Diagram
+
+<img src="./readme_images/architecture.png"/> 
+
+# Tech Stack 🧠
 
 * HTML
 * CSS
@@ -33,13 +42,13 @@ STORY SAMJHADENA. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobi
 * Elastic Mail
 
 
-# Requirements
+# Requirements 🛠️
 
 * Code Editor
 * Xampp
 * Apache server
 
-# Setting up the Project (Contribute)
+# Setting up the Project (Contribute) 🛂
 
 * clone the repository 
   * `git clone https://github.com/vidushi07/FindTheMissing.git`
@@ -49,15 +58,24 @@ STORY SAMJHADENA. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobi
   * Copy and paste your FindTheMissing folder in htdocs (in windows). For unix system the location may be different.
 * Goto `localhost:findthemissing` and start using the application
 
-# Images
-
-laga dena har page ka screenshot
 
 
-# Video
+# Website Images 🔥
+
+<img src="./readme_images/policepanel.png"/> 
+<img src="./readme_images/finderpanel.png"/> 
+
+<!-- <img src="./readme_images/compare_faces.png"/> 
+<img src="./readme_images/results.png"/>  -->
+
+# Video ✨
 
 video daal dena koi ho toh
 
-# Live link
+# Live link 🔗
 
-Live link of the website
+Live link of the website:
+
+<a href="findthemissing.herokuapp.com">findthemissing.herokuapp.com</a>
+
+---
