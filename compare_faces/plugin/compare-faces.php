@@ -141,7 +141,7 @@ if (isset($_SESSION['image'])) {
 							var police_email_id = snap.val().email;
 							alert(police_email_id);
 							Email.send({
-								SecureToken: "07125BEA20F438E29DD7FC0FFA9F85E05ADE",
+								SecureToken: "acd59b65-4c97-4e25-b77a-8a623ca4c1ca",
 								To: police_email_id,
 								From: "findingmissingperson2021@gmail.com",
 								Subject: victim_First_name + victim_last_name + " is found",
