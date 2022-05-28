@@ -143,19 +143,13 @@ if (isset($_SESSION['image'])) {
 							Email.send({
 								SecureToken: "2f643a03-c241-4694-b8ff-c83821e2ab1e",
 								To: police_email_id,
-								From: "findingmissingperson2021@gmail.com",
+								From: "shuklavidushi15@gmail.com",
 								Subject: victim_First_name + victim_last_name + " is found",
 
 								Body: 'Name: ' + victim_First_name + victim_last_name + '_________Age:' + suspect_age +
 									'____________Location: ' + location + '______________Finder: ' + finder +
 									'______________Finder_no: ' + finder_no + '_____________Accuracy:' + accuracy_percent + '%'
 
-
-								// Attachments: [
-								// {
-								// name: matched_photo,
-								// path: "https://firebasestorage.googleapis.com/v0/b/lostandfound-72457.appspot.com/o/suspect_images%2F'+matched_photo+'?alt=media"
-								// }]
 
 							}).then(
 								message => {
@@ -175,9 +169,6 @@ if (isset($_SESSION['image'])) {
 					});
 				});
 
-				// setTimeout(function(){ 
-				// window.location.href='../../user_panel/matched_result.php';
-				// },10000);
 
 			});
 		</script>
