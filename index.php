@@ -274,7 +274,7 @@
 		</div>
 		<br>
 		<br>
-		<a href="/findthemissing/policepanel/police_signup.php"><button class="btn" onMouseOver="this.style.color='#0288d1'" onMouseOut="this.style.color='#0d324d'"> Police</button></a>
+		<a href="police_signup.php"><button class="btn" onMouseOver="this.style.color='#0288d1'" onMouseOut="this.style.color='#0d324d'"> Police</button></a>
 		<br>
 		<br>
 		<br>

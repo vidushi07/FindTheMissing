@@ -29,7 +29,7 @@
 	</div>
 	<center>
 		<div class="container-logo">
-			<a href="/findthemissing/index.php"><img src="/findthemissing/images/loho2.png" alt="Logo" width="60px" height="60px"></a>
+			<a href="/findthemissing/index.php"><img src="images/loho2.png" alt="Logo" width="60px" height="60px"></a>
 		</div>
 	</center>
 
@@ -93,12 +93,12 @@
 				<br>
 				<br>
 				<div>
-					<a href="/findthemissing/policepanel/police_login.php" style="color:azure; text-decoration:underline;">Already have an account? <br> Sign in </a>
+					<a href="police_login.php" style="color:azure; text-decoration:underline;">Already have an account? <br> Sign in </a>
 				</div>
 			</center>
 		</div>
 		<div class="image1">
-			<img src="/findthemissing/images/police.png" alt="Icon" width="300px" height="300px">
+			<img src="images/police.png" alt="Icon" width="300px" height="300px">
 		</div>
 	</div>
 	<br>
@@ -153,7 +153,7 @@
 				var userId = firebase.auth().currentUser.uid;
 				firebase.database().ref('Users/' + userId).once('value').then(function(snapshot) {
 					if (!snapshot.val()) {
-						window.location.href = "admin/profile.php";
+						window.location.href = "policepanel/admin/profile.php";
 					}
 				});
 			}
