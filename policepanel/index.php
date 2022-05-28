@@ -170,7 +170,7 @@
 		</center>
 		<br>
 		<div class="icon">
-			<img src="./images/police.png" alt="police icon" style="width:300px;height:220px;">
+			<img src="../images/police.png" alt="police icon" style="width:300px;height:220px;">
 		</div>
 		<br>
 		<br>
