@@ -164,13 +164,13 @@
 		<center>
 			<br>
 			<div class="container">
-				<a href="index.php"><img src="images/loho2.png" alt="Logo" width="60px" height="60px" style="margin-left: 20%;"></a>
+				<a href="index.php"><img src="../images/loho2.png" alt="Logo" width="60px" height="60px" style="margin-left: 20%;"></a>
 
 			</div>
 		</center>
 		<br>
 		<div class="icon">
-			<img src="/policepanel/images/police.png" alt="police icon" style="width:500px;height:420px;">
+			<img src="./images/police.png" alt="police icon" style="width:300px;height:220px;">
 		</div>
 		<br>
 		<br>
