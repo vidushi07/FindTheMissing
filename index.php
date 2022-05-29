@@ -1,103 +1,3 @@
-<!-- <!DOCTYPE html>
-
-<html>
-	<head>
-		<title>Home</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">	
-		<style>
-			a:visited { 
-			text-decoration: none; 
-			color: orange; 
-			}
-			a:hover { text-decoration: none; color:white; }
-			.button {
-				border: none;
-				color: white;
-				padding: 10px 10px;
-				text-align: center;
-				text-decoration: none;
-				display: inline-block;
-				font-size: 30px;
-				margin: 30px 2px;
-				transition-duration: 0.4s;
-				cursor: pointer;
-				background-color: black;
-				color: white;
-				border-radius:8px;
-				width : 300px;
-				height: 70px;
-			}
-			.header{
-				background-color:#000;
-				color:#ffa500;
-				border-color: #080808;  
-				min-height: 50px;  
-				border: 1px solid transparent; 
-			}
-			.inner_header{
-				width:80%; 
-				margin:auto; 
-			}
-			.header_link{
-				float:right;  
-				font-size:14px; 
-				height: 50px;
-				font-size:16px;  
-				font-weight: bold; 
-				font-color:white;
-			}
-			.logo{
-				float: left;  
-				height: 50px; 
-				padding: 15px;  
-				font-size: 20px;  
-				font-weight: bold; 
-			}
-			body{
-			width: 100%; 
-			height: 100%;
-			margin: 0;
-			background: url("images/police2.jpg") ;	 
-			background-repeat: no-repeat;
-			background-attachment: fixed;
-			background-size: cover;
-		}
-		</style>
-	</head>
-	<body>
-		<div class="header">
-			<div class="inner_header">
-				<div class="logo">
-					Find the Missing
-				</div>
-				<div class="header_link">
-					<h2> <a href="user_signup.php" style="color:#ffa500;">Sign Up</a> </h2>
-				</div>
-			</div>
-		</div>
-		<br><br>
-		<center>
-		<center>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-			<h1 style="color:#FFA500">Welcome</h1>
-			<h1 style="color:#FFA500">Finding Missing Person Using AI</h1>
-			</center>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<a href="user_login.php"><button class="button" onMouseOver="this.style.color='orange'" onMouseOut="this.style.color='#fff'"> User</button></a>
-			
-		</center>
-	</body>
-</html> -->
-
-
 <!DOCTYPE html>
 
 <html>
@@ -132,12 +32,9 @@
 			height: 50px;
 			border-radius: 2px;
 			cursor: pointer;
-
 			text-align: center;
 			text-decoration: none;
 			box-shadow: 5px 10px 18px #0d324d;
-			margin-left: 50%;
-			font-family: ;
 		}
 
 
@@ -174,14 +71,10 @@
 			color: white;
 		}
 
-		.icon {
-			float: left;
-			height: 50px;
-			padding-left: 300px;
-			padding-right: 15px;
-			padding-bottom: 10px;
-			font-size: 20px;
-			font-weight: bold;
+		.box {
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 
 		.logo {
@@ -206,7 +99,7 @@
 			color: #154263;
 			line-height: 0;
 			text-align: center;
-			margin-left: 60%;
+			margin-left: 58%;
 			padding-top: 1.5%;
 			font-weight: bold;
 			margin-top: 1.35%;
@@ -234,14 +127,19 @@
 
 		.container {
 			margin-top: 1%;
-			position: absolute;
 			top: 0;
 			left: 0;
 			right: 0;
 			bottom: 0;
 			margin-bottom: 0;
 			height: 80px;
+		}
 
+		@media (max-width: 820px) {
+			.box {
+				display: flex;
+				flex-direction: column;
+			}
 		}
 	</style>
 </head>
@@ -264,22 +162,23 @@
 		<center>
 			<br>
 			<div class="container">
-				<a href="/findthemissing/index.php"><img src="images/loho2.png" alt="Logo" width="60px" height="60px" style="margin-left: 20%;"></a>
+				<a href="./index.php"><img src="./images/loho2.png" alt="Logo" width="60px" height="60px" style="margin-left: 20%;"></a>
 
 			</div>
 		</center>
 		<br>
-		<div class="icon">
-			<img src="images/search.svg" alt="icon" style="width:500px;height:420px;">
-		</div>
-		<br>
-		<br>
-		<div class="select">
-			<a href="police_signup.php"><button class="btn" onMouseOver="this.style.color='#0288d1'" onMouseOut="this.style.color='#0d324d'"> Police</button></a>
+		<div class="box">
+			<div class="icon">
+				<img src="./images/search.svg" alt="icon" style="height:420px;">
+			</div>
 			<br>
-			<br>
-			<br>
-			<a href="user_signup.php"><button class="btn" onMouseOver="this.style.color='#0288d1'" onMouseOut="this.style.color='#0d324d'"> User</button></a>
+			<div class="btns">
+				<a href="./policepanel/police_signup.php"><button class="btn" onMouseOver="this.style.color='#0288d1'" onMouseOut="this.style.color='#0d324d'"> Police</button></a>
+				<br>
+				<br>
+				<br>
+				<a href="user_signup.php"><button class="btn" u onMouseOver="this.style.color='#0288d1'" onMouseOut="this.style.color='#0d324d'"> User</button></a>
+			</div>
 		</div>
 	</center>
 </body>
