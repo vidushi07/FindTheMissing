@@ -67,7 +67,7 @@ $("#sign-up-btn").click(function () {
 	var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 	if (email != '' && passw != '' && confirm_pass != '') {
 		if (!mailformat.test(email)) {
-			alert("please enter valid email id!\n e.g.= xyz123@abc.com");
+			// alert("please enter valid email id!\n e.g.= xyz123@abc.com");
 		}
 		if (passw == confirm_pass) {
 			var result = firebase.auth().createUserWithEmailAndPassword(email, passw);
