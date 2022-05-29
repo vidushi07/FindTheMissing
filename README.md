@@ -50,7 +50,7 @@ Let me explain this further by taking an example. If a person goes missing, his 
 
 - clone the repository
   - `git clone https://github.com/vidushi07/FindTheMissing.git`
-- Download and start Xammp
+- Download and start Xampp
 - Run apache server
 - Goto htdocs (in windows)
   - Copy and paste your FindTheMissing folder in htdocs (in windows). For unix system the location may be different.
