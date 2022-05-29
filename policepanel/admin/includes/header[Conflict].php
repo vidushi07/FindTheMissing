@@ -3,7 +3,7 @@
   .sidebar .nav li .dropdown-menu a:hover,
   .sidebar .nav li .dropdown-menu a:focus,
   .sidebar .nav li.active>[data-toggle="collapse"] {
-    background: linear-gradient(60deg, #f5700c, #ff9800);
+    background: linear-gradient(60deg, #0da2ff, #0da2ff);
     color: #fff;
   }
 </style>
@@ -24,7 +24,7 @@
     right: 60px;
     padding: 4px 6px;
     border-radius: 60%;
-    background: linear-gradient(60deg, #f5700c, #ff9800);
+    background: linear-gradient(60deg, #0da2ff, #0da2ff);
     color: white;
   }
 </style>

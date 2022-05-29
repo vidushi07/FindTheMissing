@@ -23,7 +23,7 @@
           <div class="row">
             <div class="col-md-8">
               <div class="card">
-                <div class="card-header card-header-primary" style="    background: linear-gradient(60deg, #f5700c, #ff9800);">
+                <div class="card-header card-header-primary" style="    background: linear-gradient(60deg, #0da2ff, #0da2ff);">
                   <h4 class="card-title">Edit Profile</h4>
                   <p class="card-category">Complete your profile</p>
                 </div>
@@ -63,7 +63,7 @@
                         </div>
                       </div>
                     </div>
-                    <button type="button" class="btn btn-primary pull-right" id="update-btn" style="    background: linear-gradient(60deg, #f5700c, #ff9800);">Update Profile</button>
+                    <button type="button" class="btn btn-primary pull-right" id="update-btn" style="    background: linear-gradient(60deg, #0da2ff, #0da2ff);">Update Profile</button>
                     <div class="clearfix"></div>
                   </form>
                 </div>

@@ -23,7 +23,7 @@
           <div class="row">
             <div class="col-md-8">
               <div class="card">
-                <div class="card-header card-header-primary" style="    background: linear-gradient(60deg, #f5700c, #ff9800);">
+                <div class="card-header card-header-primary" style="    background: linear-gradient(60deg, #0da2ff, #0da2ff);">
                   <h4 class="card-title">Edit Profile</h4>
                   <p class="card-category">Complete your profile</p>
                 </div>
@@ -91,7 +91,7 @@
                         </div>
                       </div>
                     </div>
-                    <button type="button" class="btn btn-primary pull-right" id="update-btn" style="    background: linear-gradient(60deg, #f5700c, #ff9800);">Update Profile</button>
+                    <button type="button" class="btn btn-primary pull-right" id="update-btn" style="    background: linear-gradient(60deg, #0da2ff, #0da2ff);">Update Profile</button>
                     <div class="clearfix"></div>
                   </form>
                 </div>
@@ -110,7 +110,7 @@
                   <p class="card-description">
                     Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
                   </p>
-                  <a href="#pablo" class="btn btn-primary btn-round" style="    background: linear-gradient(60deg, #f5700c, #ff9800);">Follow</a>
+                  <a href="#pablo" class="btn btn-primary btn-round" style="    background: linear-gradient(60deg, #0da2ff, #0da2ff);">Follow</a>
                 </div>-->
               </div>
             </div>

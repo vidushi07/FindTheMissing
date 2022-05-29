@@ -21,7 +21,7 @@
 					<div class="row">
 						<div class="col-md-8">
 							<div class="card">
-								<div class="card-header card-header-primary" style="    background: linear-gradient(60deg, #f5700c, #ff9800);">
+								<div class="card-header card-header-primary" style="    background: linear-gradient(60deg, #0da2ff, #0da2ff);">
 									<h4 class="card-title">Registration</h4>
 									<p class="card-category">New Complaint</p>
 								</div>
@@ -106,7 +106,7 @@
 										</div>
 										<div class="row">
 											<div class="col-md-12">
-												<button type="button" class="btn btn-primary pull-right" id="registration-btn" style="    background: linear-gradient(60deg, #f5700c, #ff9800); cursor: not-allowed;" disabled>Submit</button>
+												<button type="button" class="btn btn-primary pull-right" id="registration-btn" style="    background: linear-gradient(60deg, #0da2ff, #0da2ff); cursor: not-allowed;" disabled>Submit</button>
 											</div>
 										</div>
 								</div>

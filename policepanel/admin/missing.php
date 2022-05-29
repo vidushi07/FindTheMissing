@@ -14,7 +14,7 @@
   }
   </style>
   <style>
-	#m_table th{ font-weight:500; text-align: center; color: #f5700c; }
+	#m_table th{ font-weight:500; text-align: center; color: #0da2ff; }
   </style>
    <style>
 .button {
@@ -52,7 +52,7 @@
           <div class="row">
 			 <div class="col-md-12">
 					  <div class="card card-plain">
-						<div class="card-header card-header-primary" style="    background: linear-gradient(60deg, #f5700c, #ff9800);">
+						<div class="card-header card-header-primary" style="    background: linear-gradient(60deg, #0da2ff, #0da2ff);">
 						  <h4 class="card-title">Missing List</h4>
 						  <p class="card-category">following are candidates who are still missing</p>
 						</div>

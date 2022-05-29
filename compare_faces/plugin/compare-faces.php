@@ -4,62 +4,62 @@ include '../includes/dbconfig.php';
 error_reporting(0);
 session_start();
 if (isset($_SESSION['image'])) {
-    // AWS_CONNECTION
-    $credentials = new Aws\Credentials\Credentials('AKIAXLWD64HCDCNSTE7F', 'm/YcD7qIzfvEFf/g3RVjzgWucnI/8Ct4+6iFB9t+');
-    $args = ([
-        'version' => 'latest',
-        'region' => 'us-east-2',
-        'credentials' => $credentials,
-    ]);
-    $client = new Aws\Rekognition\RekognitionClient($args);
+	// AWS_CONNECTION
+	$credentials = new Aws\Credentials\Credentials('AKIAXLWD64HCDCNSTE7F', 'm/YcD7qIzfvEFf/g3RVjzgWucnI/8Ct4+6iFB9t+');
+	$args = ([
+		'version' => 'latest',
+		'region' => 'us-east-2',
+		'credentials' => $credentials,
+	]);
+	$client = new Aws\Rekognition\RekognitionClient($args);
 
-    // DATA_FETCHING
-    $ref = "Registration/";
-    $fetchdata = $database->getReference($ref)->getSnapshot()->getValue(); //--------------------------------> fetch ID from Registration
+	// DATA_FETCHING
+	$ref = "Registration/";
+	$fetchdata = $database->getReference($ref)->getSnapshot()->getValue(); //--------------------------------> fetch ID from Registration
 
-    $array_key = array_keys($fetchdata);
+	$array_key = array_keys($fetchdata);
 
-    $session_image = $_SESSION['image'];
-    $count = 0;
-    foreach ($fetchdata as $key => $row) {
-        if ($row['status'] == 1) {
-            $pic = $row['victim_photo'];
-            $result = $client->compareFaces([
-                'SimilarityThreshold' => 50,
-                'SourceImage' => [ // REQUIRED
-                    'Bytes' => file_get_contents("https://firebasestorage.googleapis.com/v0/b/lostandfound-72457.appspot.com/o/suspect_images%2F$session_image?alt=media"),
+	$session_image = $_SESSION['image'];
+	$count = 0;
+	foreach ($fetchdata as $key => $row) {
+		if ($row['status'] == 1) {
+			$pic = $row['victim_photo'];
+			$result = $client->compareFaces([
+				'SimilarityThreshold' => 50,
+				'SourceImage' => [ // REQUIRED
+					'Bytes' => file_get_contents("https://firebasestorage.googleapis.com/v0/b/lostandfound-72457.appspot.com/o/suspect_images%2F$session_image?alt=media"),
 
-                ],
-                'TargetImage' => [ // REQUIRED
-                    'Bytes' => file_get_contents("https://firebasestorage.googleapis.com/v0/b/lostandfound-72457.appspot.com/o/myImages%2F$pic?alt=media"),
+				],
+				'TargetImage' => [ // REQUIRED
+					'Bytes' => file_get_contents("https://firebasestorage.googleapis.com/v0/b/lostandfound-72457.appspot.com/o/myImages%2F$pic?alt=media"),
 
-                ],
-            ]);
-            $match_percent = round($result['FaceMatches'][0]['Similarity']);
-            if ($match_percent >= 50) {
-                $percent = $match_percent;
-                $matched_image = $pic;
-                break;
-            }
-        }
-        $count++;
-    }
-    ?>
+				],
+			]);
+			$match_percent = round($result['FaceMatches'][0]['Similarity']);
+			if ($match_percent >= 50) {
+				$percent = $match_percent;
+				$matched_image = $pic;
+				break;
+			}
+		}
+		$count++;
+	}
+?>
 
-<center>
-<h1><?php
+	<center>
+		<h1><?php
 
-    if ($percent >= 70) {
-        echo ("Matched percent	= " . $percent . "% 😀" );
-        ?>
-			<br>
-		<?php
-} else {
-        echo ("No match found for image 🙁");
-        // echo "<script>window.location.href='../../user_panel/suspect_form.php';</script>";
-    }
-    ?>
-	</h1>
+			if ($percent >= 70) {
+				echo ("Matched percent	= " . $percent . "% 😀");
+			?>
+				<br>
+			<?php
+			} else {
+				echo ("No match found for image 🙁");
+				// echo "<script>window.location.href='../../user_panel/suspect_form.php';</script>";
+			}
+			?>
+		</h1>
 
 	</center>
 	<div style="width:100%; display:flex; justify-content:center;">
@@ -72,13 +72,13 @@ if (isset($_SESSION['image'])) {
 		<div style="border:1px solid;padding: 10px;">
 			<h2 style="margin-top:0; text-align:center;">Matched Image</h2>
 			<center>
-				<?php if (isset($percent)) {?>
+				<?php if (isset($percent)) { ?>
 					<img style="width:200px;" src="https://firebasestorage.googleapis.com/v0/b/lostandfound-72457.appspot.com/o/myImages%2F<?php echo $matched_image; ?>?alt=media">
 
 					<!--<img style="width:200px;" src="https://firebasestorage.googleapis.com/v0/b/beproject-133ee.appspot.com/o/myImages%2F<?php echo $matched_image; ?>?alt=media">-->
-				<?php } else {?>
+				<?php } else { ?>
 					<img style="width:200px;" src="no-picture-available-icon-8.png">
-				<?php }?>
+				<?php } ?>
 				<br>
 				<br>
 				<br>
@@ -88,12 +88,12 @@ if (isset($_SESSION['image'])) {
 
 	</div>
 
-	<button type="submit" style="font-size: 15px;	color: #0d324d;border-radius: 5px;display: inline-block;border: none;text-decoration: none;cursor: pointer;height: 45px;text-align: center;box-shadow: 5px 10px 9px #0d324d;margin-left: 46%; margin-top: 20px" id="sign-up-btn"><a href="../../user_panel/suspect_form.php"> Go to Dashboard</a></button>
+	<button type="submit" style="font-size: 15px;	color: #0d324d;border-radius: 5px;display: inline-block;border: none;text-decoration: none;cursor: pointer;height: 45px;text-align: center;box-shadow: 5px 10px 9px #0d324d;margin-left: 46%; margin-top: 20px" id="sign-up-btn"><a href="../../user_panel/dashboard.php"> Go to Dashboard</a></button>
 
 	<!-- <center><img src="redirect.gif" style="width:100%;margin-top:200px;"></center> -->
 	<?php
-if (isset($percent)) {
-        ?>
+	if (isset($percent)) {
+	?>
 		<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
@@ -184,15 +184,15 @@ if (isset($percent)) {
 		</script>
 
 	<?php
-}
-    // echo "<pre>";
-    // print_r($result);
-    // unset($_SESSION['image']);
-    ?>
+	}
+	// echo "<pre>";
+	// print_r($result);
+	// unset($_SESSION['image']);
+	?>
 
 <?php
 
 } else {
-    echo "<script>window.location.href='../../user_panel/suspect_form.php';</script>";
+	echo "<script>window.location.href='../../user_panel/suspect_form.php';</script>";
 }
 ?>

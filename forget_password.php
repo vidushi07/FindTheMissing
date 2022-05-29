@@ -15,21 +15,21 @@
 		<div class="header">
 			<div class="inner_header">
 				<div class="logo">
-					<a href="index.php" style="font-family: initial; color:#ffa500;">BE-CSE-B Group A</a>
+					<a href="index.php" style="font-family: initial; color:#0da2ff;">BE-CSE-B Group A</a>
 				</div>
 			</div>
 		</div>
 		<br><br><br>
 		<center>
 		<div style = "margin-top:180px">
-			<h1 style="color:#ffa500">Forget Password</h1>
+			<h1 style="color:#0da2ff">Forget Password</h1>
 			<h5 class="text-danger" id="login-err-msg"></h5>
 		</div>
 		</center>
 			<br>
 
 	<form>
-	<center><p style="color:orange">Please enter your email id below and we will send you information to recover your account.</p></center>
+	<center><p style="color:#0da2ff">Please enter your email id below and we will send you information to recover your account.</p></center>
 	<div class="xyz">
 		 <div class="row mb-3">
 			<label for="email" class="col-sm-2 col-form-label">Email Id:</label>

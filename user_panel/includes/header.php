@@ -1,6 +1,6 @@
 <style>
 .sidebar .nav li:hover>a, .sidebar .nav li .dropdown-menu a:hover, .sidebar .nav li .dropdown-menu a:focus, .sidebar .nav li.active>[data-toggle="collapse"] {
-    background: linear-gradient(60deg, #f5700c, #ff9800);
+    background: linear-gradient(60deg, #0da2ff, #0da2ff);
 	color: #fff;
 }
 </style>

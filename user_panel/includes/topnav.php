@@ -14,7 +14,7 @@
              <!-- <li class="nav-item dropdown">
                 <a class="nav-link" href="javscript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">notifications</i>
-                  <span class="notification" style="    background: linear-gradient(60deg, #f5700c, #ff9800);">6</span>
+                  <span class="notification" style="    background: linear-gradient(60deg, #0da2ff, #0da2ff);">6</span>
                   <p class="d-lg-none d-md-block">
                     Some Actions
                   </p>
@@ -36,7 +36,7 @@
                   </p>-->
                 </a>
 				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink1">
-                  <a class="dropdown-item" href="javascript:void(0)" id="logout-btn" style="background:linear-gradient(60deg, #f5700c, #ff9800)">Logout</a>
+                  <a class="dropdown-item" href="/index.php" id="logout-btn" style="background:linear-gradient(60deg, #0da2ff, #0da2ff)">Logout</a>
                 </div>
               </li>
             </ul>
